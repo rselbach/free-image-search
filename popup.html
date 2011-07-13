@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reusable Image Search</title>
+<script type="text/javascript">
+function searchImages() {
+
+	var license = 'f';
+	if (document.forms[0].deriv.checked) {
+		license = 'fm';
+	}
+        chrome.tabs.create({
+		'url': 'http://images.google.com/search?' + '&' +
+		'as_q=' + document.forms[0].q.value + '&'+ 
+		'tbm=isch&as_epq=&as_oq=&as_eq=&as_sitesearch=&safe=images&as_st=y&' +
+		'tbs=iur:' + license
+        	});
+        return false;
+}
+</script>
+
+</head>
+<body style="width:300px; background: #fff">
+<form action="#" onsubmit="searchImages(); return false;">
+<div>
+<div style="float: left;width:48px;">
+<img src="icon_48.png" width="48" height="48">
+</div>
+<div style="float:right; width:245px; padding-top: 5px; padding-left: 5px;">
+<input type="text" name="q" size="31" autofocus=
+"true"> <input type="submit" name="submit" value="Search"><br>
+<input type="checkbox" name="deriv" value="Blah"> <span style="font-family: sans-serif; font-size: small;">Allow modifications</span></div>
+</div>
+</form>
+</body>
+</html>
