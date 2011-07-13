@@ -1,13 +1,13 @@
 {
-  "name": "Reusable Image Search",
+  "name": "Free Image Search",
   "version": "1.0",
-  "description": "Easily search Google for images with licenses allowing reuse (and optionally modifications.)",
+  "description": "Easily search Google for free (as in speech) images for reuse (and optionally modifications.)",
   "permissions": ["tabs"],
   "icons": {
       "48": "icon_48.png",
       "128": "icon_128.png" },
   "browser_action": {
-      "default_title": "Search Reusable Images",
+      "default_title": "Free Image Search",
       "default_icon": "favicon.png",
       "popup": "popup.html"
   }
